@@ -414,9 +414,11 @@ header ul li a:hover {
 
 .student-card img {
   width: 100%;
-  max-width: 280px;
+  height: 430px;        /* ✅ กำหนดความสูงให้คงที่ */
+  object-fit: cover;    /* ✅ ครอบให้เต็ม ไม่บิดเบี้ยว */
   border-radius: 12px;
 }
+
 
 .student-card p {
   margin-top: 12px;
@@ -453,8 +455,6 @@ header ul li a:hover {
   background: #333;
 }
 
-
-/* 🎓 Activities Section */
 /* 🎓 Activities Section */
 .activities {
   margin: 70px auto;
@@ -553,7 +553,7 @@ header ul li a:hover {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 50%;
-  z-index: 20; /* ✅ ให้อยู่บนสุด ไม่เลื่อนไปกับ track */
+  z-index: 20;
   transition: 0.3s;
 }
 
@@ -572,19 +572,19 @@ header ul li a:hover {
 /* 📱 Responsive */
 @media (max-width: 1200px) {
   .activity-card {
-    flex: 0 0 calc(33.333% - 20px); /* 3 ใบ */
+    flex: 0 0 calc(33.333% - 20px);
   }
 }
 
 @media (max-width: 900px) {
   .activity-card {
-    flex: 0 0 calc(50% - 20px); /* 2 ใบ */
+    flex: 0 0 calc(50% - 20px);
   }
 }
 
 @media (max-width: 600px) {
   .activity-card {
-    flex: 0 0 100%; /* 1 ใบ */
+    flex: 0 0 100%;
     margin: 0 auto 20px;
   }
 
@@ -593,6 +593,7 @@ header ul li a:hover {
     padding: 6px 10px;
   }
 }
+
 
 
 
@@ -687,4 +688,5 @@ footer {
   .footer-links {
     margin-top: 10px;
   }
+  
 }

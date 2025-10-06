@@ -160,61 +160,92 @@ header ul li a:hover {
 }
 
 
-/* Hero Section */
+/* Hero Section (Responsive Fullscreen Image) */
 .hero {
-  background: url('/photo/lINE1.jpg') no-repeat center center/cover;
-  height: 500px;
-  position: relative;
+  background-image: url('/photo/Allpepler.png');
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: cover;             
+  height: 100vh;                      
+  min-height: 1100px;                  
   display: flex;
-  align-items: flex-end;
-  padding: 40px;
+  align-items: flex-end;              
+  justify-content: flex-start;
+  padding: 60px;
+  position: relative;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* เพิ่ม overlay ทับรูป */
+/* Overlay (ช่วยให้ข้อความอ่านง่ายขึ้น) */
 .hero::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
+/* Content */
 .hero-content {
   position: relative;
-  z-index: 2; /* ให้อยู่เหนือ overlay */
-  color: #ffffff; /* ตัวอักษรขาว */
-  max-width: 600px;
+  z-index: 2; 
+  max-width: 700px;
+  color: #ffffff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .hero-content h1 {
-  font-size: 42px;
+  font-size: clamp(32px, 5vw, 54px);
   font-weight: 800;
-  margin-bottom: 10px;
-  color: #ffffff;
+  margin-bottom: 12px;
 }
 
 .hero-content p {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: clamp(18px, 2.2vw, 22px);
+  margin-bottom: 24px;
   font-weight: 500;
-  color: #ffffff; /* สีเทาอ่อนแทนขาวล้วน */
+  color: #f0f0f0;
 }
 
+/* ปุ่ม */
 .btn-hero {
   display: inline-block;
   background: #003399;
   color: #fff;
-  padding: 12px 24px;
-  border-radius: 6px;
+  padding: 12px 28px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
   transition: 0.3s;
 }
 
 .btn-hero:hover {
-  background: #003d99;
+  background: #002080;
 }
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;               
+    padding: 40px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 95%;
+  }
+
+  .btn-hero {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+}
+
 
 
 /* About Section */

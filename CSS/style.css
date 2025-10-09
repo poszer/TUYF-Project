@@ -162,7 +162,7 @@ header ul li a:hover {
 
 /* Hero Section (Responsive Fullscreen Image) */
 .hero {
-  background-image: url('/photo/Allpepler.png');
+  background-image: url('../photo/Wallpaper.jpg');
   background-repeat: no-repeat;
   background-position: center center; 
   background-size: cover;             
